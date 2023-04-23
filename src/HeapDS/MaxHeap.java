@@ -19,7 +19,7 @@ public class MaxHeap<T extends Comparable<T>> extends Heap<T> implements HeapInt
             if(leftChildIdx >= size()){
                 break;
             }
-            else if(leftChildIdx < size() && rightChildIdx >= size()){
+            else if(rightChildIdx >= size()){
                 max = heapList.get(leftChildIdx).hashCode();
             }
             else{

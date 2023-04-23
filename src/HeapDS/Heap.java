@@ -1,6 +1,5 @@
 package HeapDS;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Heap <T extends Comparable<T>> implements HeapInterface<T>{

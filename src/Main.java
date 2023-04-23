@@ -30,7 +30,7 @@ public class Main<T> {
         System.out.println("-------------------------------------------------------------------------------------");
 
         ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(50); arrayList.add(30); arrayList.add(20); arrayList.add(15);
+        arrayList.add(50); arrayList.add(50); arrayList.add(20); arrayList.add(15);
         arrayList.add(10); arrayList.add(8); arrayList.add(16); arrayList.add(520); arrayList.add(300);
         arrayList.add(2021); arrayList.add(115); arrayList.add(0); arrayList.add(18); arrayList.add(156);
 

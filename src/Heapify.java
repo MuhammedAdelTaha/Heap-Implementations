@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 //heapify algorithm takes O(n) time complexity
 public class Heapify<T extends Comparable<T>> {
@@ -15,17 +16,17 @@ public class Heapify<T extends Comparable<T>> {
             while (true) {
                 if (leftChildIdx >= size) {
                     break;
-                } else if (leftChildIdx < size && rightChildIdx >= size) {
+                } else if (rightChildIdx >= size) {
                     compare = elements.get(leftChildIdx).hashCode();
                 } else {
-                    compare = (type == "max" ?
+                    compare = (Objects.equals(type, "max") ?
                             Math.max(elements.get(leftChildIdx).hashCode(), elements.get(rightChildIdx).hashCode()) :
                             Math.min(elements.get(leftChildIdx).hashCode(), elements.get(rightChildIdx).hashCode()));
                 }
-                if(type == "max"){
+                if(Objects.equals(type, "max")){
                     if (parentIdx == size - 1 || elements.get(parentIdx).hashCode() > compare) break;
                 }
-                else if(type == "min"){
+                else if(Objects.equals(type, "min")){
                     if (parentIdx == size - 1 || elements.get(parentIdx).hashCode() < compare) break;
                 }
 
