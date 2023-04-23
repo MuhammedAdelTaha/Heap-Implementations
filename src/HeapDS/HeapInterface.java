@@ -9,7 +9,8 @@ public interface HeapInterface <T extends Comparable<T>>{
     T top();
     void clear();
     void print();
+    //insertion takes O(lg(n)) time complexity
     void insert(T element);
+    //deletion takes O(lg(n)) time complexity
     void delete();
-    ArrayList<T> heapSort(ArrayList<T> elements);
 }

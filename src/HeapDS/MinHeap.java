@@ -1,7 +1,5 @@
 package HeapDS;
 
-import java.util.ArrayList;
-
 public class MinHeap<T extends Comparable<T>> extends Heap<T> implements HeapInterface<T>{
     public void insert(T element){
         heapList.add(element);
@@ -40,22 +38,5 @@ public class MinHeap<T extends Comparable<T>> extends Heap<T> implements HeapInt
             leftChildIdx = parentIdx * 2 + 1;
             rightChildIdx= parentIdx * 2 + 2;
         }
-    }
-    public ArrayList<T> heapSort(ArrayList<T> elements){
-        if(elements.isEmpty()){
-            System.out.println("[]"); return null;
-        }
-        clear();
-        for(int i = 0; i < elements.size(); i++){
-            insert(elements.get(i));
-        }
-        elements.clear();
-        while(!isEmpty()){
-            elements.add(top());
-            delete();
-        }
-        heapList = elements;
-        print();
-        return heapList;
     }
 }

@@ -6,8 +6,7 @@ import java.util.ArrayList;
 public class Heap <T extends Comparable<T>> implements HeapInterface<T>{
     //insert, delete, top, clear, size, height, contains, print
     protected ArrayList<T> heapList = new ArrayList<>();
-
-    protected double lg(int num){
+    private double lg(int num){
         return Math.log(num) / Math.log(2);
     }
     protected void swap(int idx1, int idx2){
@@ -15,7 +14,7 @@ public class Heap <T extends Comparable<T>> implements HeapInterface<T>{
         heapList.set(idx1, heapList.get(idx2));
         heapList.set(idx2, temp);
     }
-    protected boolean isEmpty(){
+    public boolean isEmpty(){
         return heapList.isEmpty();
     }
     @Override
@@ -40,21 +39,10 @@ public class Heap <T extends Comparable<T>> implements HeapInterface<T>{
     }
     @Override
     public void print(){
-        System.out.print("[");
-        for(int i = 0; i < size(); i++){
-            System.out.print(heapList.get(i));
-            if(i != size() - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
+        System.out.println(heapList);
     }
     @Override
     public void insert(T element) {}
     @Override
     public void delete() {}
-    @Override
-    public ArrayList<T> heapSort(ArrayList<T> elements) {
-        return null;
-    }
 }
